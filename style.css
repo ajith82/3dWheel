@@ -7,3 +7,31 @@ section {
   width: 100%;
   background-color: black;
 }
+img {
+  max-width: 200px;
+}
+.container {
+  display: flex;
+  height: 1450px;
+  /* flex-direction: column; */
+  gap: 100px;
+  justify-content: center;
+}
+.slide {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 50px;
+  bottom: 50px;
+  height: fit-content;
+  /* animation: spin 4s infinite linear; */
+}
+
+@keyframes spin {
+    0% {transform: rotateX(0deg) rotateY(0deg);}
+  50%{transform: rotateX(-180deg) rotateY(180deg);}
+  90% {transform: rotateX(0deg) rotateY(0deg);}
+}
