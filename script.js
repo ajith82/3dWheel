@@ -25,7 +25,7 @@ document.addEventListener("scroll", () => {
           transform: perspective(1000px) rotateX(${scrollTop}deg);
         }
         100% {
-          transform: perspective(1000px) rotateX(${scrollTop + 359}deg);
+          transform: perspective(1000px) rotateX(${scrollTop}deg);
         }
       }`;
 
