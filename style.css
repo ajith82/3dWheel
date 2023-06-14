@@ -37,7 +37,7 @@ img {
   transform-style: preserve-3d;
 
   animation-name: rotate;
-  animation-duration: 10s;
+  animation-duration: 100000000000000000s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
@@ -75,7 +75,6 @@ img {
 .slide img:nth-child(6) {
   transform: rotateX(300deg) translateZ(250px);
 }
-
 
 @keyframes spin {
   0% {
