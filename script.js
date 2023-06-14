@@ -1,34 +1,17 @@
 const section = document.getElementsByTagName("section")[0];
 const container = document.getElementsByClassName("container")[0];
-const slide = document.getElementsByClassName("slide")[0];
-console.log(window.pageYOffset);
+const slide = document.getElementsByClassName("slide");
 const styleSheet = document.styleSheets[0];
 
 if (window.pageYOffset === 0) {
-  const rotateKeyframesDefault = `@keyframes rotate {
-        0% {
-          transform: perspective(1000px) rotateX(0deg);
-        }
-        100% {
-          transform: perspective(1000px) rotateX(359deg);
-        }
-      }`;
-
-  styleSheet.insertRule(rotateKeyframesDefault, 0);
+  slide[0].style.transform = `perspective(1000px) rotateX(0deg)`;
+  slide[1].style.transform = `perspective(1000px) rotateX(0deg)`;
+  slide[2].style.transform = `perspective(1000px) rotateX(0deg)`;
 }
 
 document.addEventListener("scroll", () => {
   let scrollTop = window.pageYOffset;
-  console.log(scrollTop);
-  const rotateKeyframes = `@keyframes rotate {
-        0% {
-          transform: perspective(1000px) rotateX(${scrollTop}deg);
-        }
-        100% {
-          transform: perspective(1000px) rotateX(${scrollTop}deg);
-        }
-      }`;
-
-  styleSheet.deleteRule(0);
-  styleSheet.insertRule(rotateKeyframes, 0);
+  for (let i = 0; i <= slide.length; i++) {
+    slide[i].style.transform = `perspective(1000px) rotateX(${scrollTop / 2}deg)`;
+  }
 });

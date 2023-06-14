@@ -19,8 +19,6 @@ img {
   max-width: 200px;
   /* display: block; */
   position: absolute;
-  width: 250px;
-  height: 200px;
   opacity: 0.95;
   border-radius: 10px;
 }
@@ -36,8 +34,6 @@ img {
   position: fixed;
   transform-style: preserve-3d;
 
-  animation-name: rotate;
-  animation-duration: 100000000000000000s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
