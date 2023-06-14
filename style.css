@@ -7,55 +7,45 @@ section {
   width: 100%;
   background-color: #000000;
 }
-img {
-  max-width: 200px;
-  display: block;
-  position: absolute;
-  background: #000;
-  width: 250px;
-  height: 200px;
-  line-height: 200px;
-  font-size: 5em;
-  text-align: center;
-  color: #FFF;
-  opacity: 0.95;
-  border-radius: 10px;
-}
 .container {
   display: flex;
   height: 1450px;
   gap: 100px;
   justify-content: center;
   position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  transform: rotateY(0deg);
+  overflow: hidden;
 }
-.scroll-container{
+img {
+  max-width: 200px;
+  /* display: block; */
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+/* .scroll-container{
     width: 500px;
     height: 1000px;
     margin: 0 auto;
-    /* overflow: scroll; */
-  }
+  } */
 .slide {
   display: flex;
-  flex-direction: column;
-  gap: 50px;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  bottom: 50px;
-  height: fit-content;
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  position: fixed;
   transform-style: preserve-3d;
-  transition: transform 1s;
 
   animation-name: rotate;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 45%;
   /* animation: spin 4s infinite linear; */
 }
 .slide img:first-child {
