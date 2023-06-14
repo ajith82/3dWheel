@@ -21,6 +21,8 @@ img {
   position: absolute;
   opacity: 0.95;
   border-radius: 10px;
+  padding: 100px 0 100px;
+  background-color: black;
 }
 /* .scroll-container{
     width: 500px;
